@@ -108,7 +108,8 @@ ENV PATH /google-cloud-sdk/bin:$PATH
 RUN yes | gcloud components update
 RUN yes | gcloud components update preview
 
-
+# heroku cli install
+RUN npm install -g heroku-cli
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["sh"]
