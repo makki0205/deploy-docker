@@ -1,4 +1,4 @@
-FROM node:8.4-alpine
+FROM node:10.14-alpine
 
 RUN apk add --no-cache \
     git curl tar \
@@ -131,6 +131,9 @@ RUN yes | gcloud components update preview
 
 # heroku cli install
 RUN npm install -g heroku-cli
+
+# yarn install
+RUN npm install -g yarn
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["sh"]
