@@ -7,7 +7,7 @@ RUN apk add --no-cache \
 
 ######### golang
 RUN apk add --no-cache \
-    ca-certificates
+    ca-certificates mercurial
 
 # set up nsswitch.conf for Go's "netgo" implementation
 # - https://github.com/golang/go/blob/go1.9.1/src/net/conf.go#L194-L275
